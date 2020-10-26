@@ -1,0 +1,18 @@
+.criminalEnergyList {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-around;
+}
+
+/* main {
+    display: flex;
+} */
+
+.crims {
+    border: 1px dotted black;
+    margin: 10px;
+    padding: 1px;
+    flex-basis: 25%;
+}
+
