@@ -17,7 +17,7 @@ eventHub.addEventListener("change", event => {
     // Only do this if the `crimeSelect` element was changed
     if (event.target.id === "crimeSelect") {
         // Create custom event. Provide an appropriate name.
-        const customEvent = new CustomEvent("crimeChosen", {
+        const customEvent = new CustomEvent("crimeSelected", {
             detail: {
                 crimeThatWasChosen: event.target.value
             }
