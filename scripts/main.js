@@ -7,6 +7,9 @@ getOfficers()
     }
     )
 
+import { NoteForm } from './notes/NoteForm.js'
+NoteForm()
+
 // import { useCriminals, getCriminals } from './criminals/CriminalProvider.js'
 import { CriminalList } from './criminals/CriminalList.js'
 CriminalList()
