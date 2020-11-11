@@ -1,4 +1,4 @@
-.criminalEnergyList {
+.criminalsContainer {
     display: flex;
     flex-wrap: wrap;
     align-content: space-evenly;
@@ -9,10 +9,19 @@
     display: flex;
 } */
 
-.crims {
-    border: 1px dotted black;
+.criminal {
+    border: 1px solid black;
     margin: 10px;
     padding: 1px;
     flex-basis: 25%;
 }
 
+.twoContainers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.notesContainer {
+    display: flex;
+    align-self: flex-end;
+}
