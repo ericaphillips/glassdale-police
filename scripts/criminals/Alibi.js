@@ -13,24 +13,27 @@ eventHub.addEventListener("alibiButtonClicked", (eventObject) => {
     console.log("found criminal", foundCriminal)
 
     //add criminal's alibis to the crimimnal card 
-    const alibisForFoundCriminal = foundCriminal.known_associates
+    AlibiList(foundCriminal)
 
 })
 //fucntion that adds alibis to the criminal card 
-export const AlibiList = () => {
+export const AlibiList = (criminalObject) => {
     //HTML for all of the alibis
-    render(alibisForFoundCriminal)
+    render(criminalObject)
 }
 
 //make render method for adding alibis 
-const render = () => {
-    return `
-    <div class="alibi_list">
-${alibiCollection.map(alibiObject => {
-    return `
-    <p>${alibiObject.name}</p>
-    <p>${alibiObject.alibi}</p>
-    `
-})}
-    `
+const render = (criminalObject) => {
+    const contentTarget = document.querySelector(`#criminal-${criminalObject.id}`)
+
+    contentTarget.innerHTML += `
+    <div class="alibi__list">
+        ${criminalObject.known_associates.map(alibiObject => {
+        return `
+                <p>${alibiObject.name}</p>
+                <p>${alibiObject.alibi}</p>
+            `
+    }).join("")}
+    </div>
+     `
 }

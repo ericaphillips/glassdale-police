@@ -1,10 +1,18 @@
 {
-    "notes": [
-        {
-            "date": "10/19/2020",
-            "suspect": "Carl it's always Carl",
-            "text": "He is scary"
-        }
-
-    ]
+  "notes": [
+    {
+      "noteInterviewDate": "2020-11-18",
+      "noteAuthor": "Yeety",
+      "criminalId": 15,
+      "noteText": "Yeety",
+      "id": 18
+    },
+    {
+      "noteInterviewDate": "2020-11-18",
+      "noteAuthor": "Yeety",
+      "criminalId": 15,
+      "noteText": "Yeety",
+      "id": 19
+    }
+  ]
 }
