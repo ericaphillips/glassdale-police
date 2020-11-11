@@ -8,7 +8,7 @@ export const Criminal = (criminalObjects) => {
     <div class="criminal__crime">Crime: ${criminalObjects.conviction}</div>
     <div class="criminal__jailStart">Jail start: ${new Date(criminalObjects.incarceration.start).toLocaleDateString('en-US')}</div>
     <div class="criminal__jailEnd">Jail end: ${new Date(criminalObjects.incarceration.end).toLocaleDateString('en-US')}</div>
-    // <button id="associates--${criminal.id}">Associate Alibis</button>
+    // <button id="associates--${criminalObjects.id}">Associate Alibis</button>
     </div>
     `
 }

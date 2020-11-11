@@ -7,6 +7,13 @@ getOfficers()
     }
     )
 
+import { NoteForm } from './notes/NoteForm.js'
+NoteForm()
+
+import { NoteList } from './notes/NoteList.js'
+NoteList()
+
+
 // import { useCriminals, getCriminals } from './criminals/CriminalProvider.js'
 import { CriminalList } from './criminals/CriminalList.js'
 CriminalList()
@@ -20,3 +27,7 @@ CriminalList()
 
     import { ConvictionSelect } from './convictions/ConvictionSelect.js'
     ConvictionSelect()
+
+import { OfficerSelect } from './officers/OfficerSelect.js'
+
+OfficerSelect()
