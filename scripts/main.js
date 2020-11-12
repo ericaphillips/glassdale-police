@@ -31,3 +31,7 @@ CriminalList()
 import { OfficerSelect } from './officers/OfficerSelect.js'
 
 OfficerSelect()
+
+import { renderWitnessButton } from '../witnesses/WitnessStatementButton.js'
+import "../witnesses/WitnessStatementList.js"
+renderWitnessButton()

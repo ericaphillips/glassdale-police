@@ -5,7 +5,7 @@ export const NoteAsHTML = (noteObject, criminalObject) => {
     return `
     <div class="note">
     <h5>Author: ${noteObject.noteAuthor}</h5>
-    <p>Date of Interview: ${noteObject.noteDate}</p>
+    <p>Date of Interview: ${noteObject.noteInterviewDate}</p>
     <p>Suspect: ${criminalObject.name}</p>
     <p>${noteObject.noteText}</p>
     <button id="deleteNote--${noteObject.id}">Delete</button>
