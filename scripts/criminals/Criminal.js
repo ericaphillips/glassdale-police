@@ -5,9 +5,9 @@ export const Criminal = (criminalObject, facilities) => {
     <div class="criminal">
         <h4>${criminalObject.name}</h4>
         <div class="criminal__details">
-            <p>Convicted for ${criminalObject.conviction}</p>
+            <p>Crime: ${criminalObject.conviction}</p>
             <p>Arrested by ${criminalObject.arrestingOfficer}</p>
-            <p>Incarcerated between:
+            <p>Jail dates:
                 ${new Date(criminalObject.incarceration.start).toLocaleDateString()} and
                 ${new Date(criminalObject.incarceration.end).toLocaleDateString()}
             </p>
@@ -18,25 +18,27 @@ export const Criminal = (criminalObject, facilities) => {
                     ${facilities.map(f => `<li>${f.facilityName}</li>`).join("")}
                 </ul>
             </div>
-            <button id="associates--${criminalObject.id}">Show Associates</button>
+            <button id="associates--${criminalObject.id}">Associate Alibis</button>
         </div>
     </div>
     `
 }
 
-// eventHub.addEventListener("click", (eventObject) => {
-//     //split id of alibi button
-//     const [prefix, criminalId] = eventObject.target.id.split("--")
-//     //check if the button that was clicked is the alibi button
 
-//     if(eventObject.target.id.startsWith("associates--")){
-//     //build a custom event
-//     const myCustomEvent = new CustomEvent("alibiButtonClicked", {
-//         detail: {
-//             criminalId: criminalId
-//         }
-//     })
-//     //dispacth the event to the eventHub so other modules can listne for it
-//     eventHub.dispatchEvent(myCustomEvent)
-//     }
-// })
+eventHub.addEventListener("click", (eventObject) => {
+    // split id of alibi button!
+    const [nameOfId, criminalId] = eventObject.target.id.split("--")
+    
+    // check if button clicked was alibi button
+    if(eventObject.target.id.startsWith("associates--")){
+    //   console.log("button was clicked:", nameOfId, criminalId)
+      // build a custom event
+      const myCustomEvent = new CustomEvent("alibiButtonClicked", {
+        detail: {
+          criminalId: criminalId
+        }
+      })
+      // dispatch the event to the eventHub so that other modules can listen for this event
+      eventHub.dispatchEvent(myCustomEvent)
+    }
+})

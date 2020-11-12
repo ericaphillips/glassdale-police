@@ -9,7 +9,7 @@ export const renderWitnessButton = () => {
     <button id="display-witnesses-button">Witness Statements</button>
     `
 }
-
+//WHAT IS LISTENING FOR THIS
 eventHub.addEventListener("click", (clickEvent) => {
     //if witness button is clicked dispatches to eventHub that witness button was clicked
   if (clickEvent.target.id === "display-witnesses-button") {
